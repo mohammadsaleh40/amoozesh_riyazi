@@ -1,0 +1,21 @@
+
+ .jaabe
+	{
+	height: 60vh;
+	overflow-x: hidden;	
+	}
+
+ol  {
+	counter-reset: item
+	}
+li  {
+	display: block
+	}
+li:before
+	{
+	content: counters(item, ".") " ";
+	counter-increment: item
+	}
+@font-face { font-family: Vazir; src: url('/dist/theme/fonts/vazir-font-v16.1.0/Vazir.eot'); src: url('/dist/theme/fonts/vazir-font-v16.1.0/Vazir.eot?#iefix') format('embedded-opentype'), url('/dist/theme/fonts/vazir-font-v16.1.0/Vazir.woff') format('woff'), url('/dist/theme/fonts/vazir-font-v16.1.0/Vazir.ttf') format('truetype'); font-weight: normal; }
+@font-face { font-family: Vazir; src: url('/dist/theme/fonts/vazir-font-v16.1.0/Vazir-Bold.eot'); src: url('/dist/theme/fonts/vazir-font-v16.1.0/Vazir-Bold.eot?#iefix') format('embedded-opentype'), url('/dist/theme/fonts/vazir-font-v16.1.0/Vazir-Bold.woff') format('woff'), url('/dist/theme/fonts/vazir-font-v16.1.0/Vazir-Bold.ttf') format('truetype'); font-weight: bold; }
+@font-face { font-family: Vazir; src: url('/dist/theme/fonts/vazir-font-v16.1.0/Vazir-Light.eot'); src: url('/dist/theme/fonts/vazir-font-v16.1.0/Vazir-Light.eot?#iefix') format('embedded-opentype'), url('/dist/theme/fonts/vazir-font-v16.1.0/Vazir-Light.woff') format('woff'), url('/dist/theme/fonts/vazir-font-v16.1.0/Vazir-Light.ttf') format('truetype'); font-weight: 300; }
