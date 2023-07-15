@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>دنباله‌ها</title>
 
 		<link rel="stylesheet" href="/dist/reset.css">
 		<link rel="stylesheet" href="/dist/reveal.css">
@@ -38,10 +38,46 @@
                         </p>
                     </section>
 				</section>
-					
+				<section>
+					<h2 class="r-fit-text" dir="rtl" style="font-family: Vazir;">چیزی که از الگوها در گذشته یاد گرفتیم.</h2>
+					<p  class="fragment fade-up" style="font-family: Vazir;">الگوهای رنگی و عددی در کلاس اول</p>
+					<p  class="fragment fade-up" style="font-family: Vazir;">مجموع اعداد یک دنباله</p>
+					<p class="fragment fade-up" style="font-family: Vazir;">مثل مجموع اعداد ۱ تا ۱۰۰</p>
+				</section>
+				<section data-auto-animate data-auto-animate-id="majmooa">
+					<h2 style="font-family: Vazir;" class="r-fit-text">مجموع جمله‌های</h2><h2 class="r-fit-text" style="font-family: Vazir;">یک دنباله</h2>
+				</section>
+				<section data-auto-animate data-auto-animate-id="majmooa">
+					<h2 style="font-family: Vazir;" class="r-fit-text">مجموع جمله‌های</h2><h2 class="r-fit-text" style="font-family: Vazir;">دنباله حسابی</h2>
+				</section>
+				<section data-auto-animate data-auto-animate-id="majmooa">
+					<h2 style="font-family: Vazir;" class="r-fit-text">مجموع جمله‌های</h2><h2 class="r-fit-text" style="font-family: Vazir;">دنباله هندسی</h2>
+				</section>
+				<section>
+					<section>
+						<h2 style="font-family: Vazir;" class="r-fit-text">مجموع جمله‌های دنباله هندسی با</h2>
+						\[\begin{aligned}
+						0 \lt r \lt 1
+						\end{aligned} \]
+					</section>
+					<section data-background-video="/media/videos/Visual proof of infinite geometric series sum.mp4">
+
+					</section>
+				</section>
+				<section>
+					<h2>The Lorenz Equations</h2>
+					\[\begin{aligned}
+					\dot{x} &amp; = \sigma(y-x) \\
+					\dot{y} &amp; = \rho x - y - xz \\
+					\dot{z} &amp; = -\beta z + xy
+					\end{aligned} \]
+				  </section>
 			</div>
 		</div>
-
+		<script src="plugin/math/math.js"></script>
+		<script>
+			Reveal.initialize({ plugins: [ RevealMath.KaTeX ] });
+		</script>
 		<script src="/dist/reveal.js"></script>
 		<script src="/plugin/math/math.js"></script>
 		<script src="/plugin/manim/manim.js"></script>
