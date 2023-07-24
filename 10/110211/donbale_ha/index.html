@@ -13,7 +13,17 @@
 		<link rel="stylesheet" href="/css/example.css">
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="/plugin/highlight/monokai.css">
-		
+		<style>
+			/* استایل‌های CSS برای تنظیم نمایش تصاویر */
+			.image-container {
+			  display: flex; /* استفاده از Flexbox برای قرار دادن تصاویر در یک ردیف */
+			}
+			.image-container img {
+			  width: 65%; /* تنظیم عرض تصاویر برای نمایش چهار تصویر در یک ردیف */
+			  padding: 3px; /* فاصله دهی بین تصاویر */
+			  box-sizing: border-box; /* حفظ اندازه کلی تصاویر با در نظر گرفتن padding */
+			}
+		  </style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -39,16 +49,50 @@
                     </section>
 				</section>
 				<section>
+					<section>
+						<p class="r-fit-text" dir="rtl" style="font-family: Vazir;">کاربردهایی که دنباله می‌تونه داشته باشه.</p>	
+					</section>
+					<section>
+						<img class="r-stretch" data-src="/media/pictures/amo_hasan.jpg">
+					</section>
+					<section>
+						<div class = "image-container">
+							<img class="r-stretch" data-src="/media/pictures/DreamShaper_v7_A_cafe_where_breakfast_is_served_0.jpg">
+							<img class="r-stretch" data-src="/media/pictures/DreamShaper_v7_A_cafe_where_breakfast_is_served_1.jpg">
+							<img class="r-stretch" data-src="/media/pictures/DreamShaper_v7_A_cafe_where_breakfast_is_served_2.jpg">
+							<img class="r-stretch" data-src="/media/pictures/DreamShaper_v7_A_cafe_where_breakfast_is_served_3.jpg">
+						</div>
+					</section>
+					<section>
+						<img class="r-stretch" data-src="/media/pictures/Absolute_Reality_v16_An_athletic_man_about_28_years_old_who_is_0.jpg">
+					</section>
+					
+				</section>
+				<section data-auto-animate data-auto-animate-id="moroor">
 					<h2 class="r-fit-text" dir="rtl" style="font-family: Vazir;">چیزی که از الگوها در گذشته یاد گرفتیم.</h2>
 					<p  class="fragment fade-up" style="font-family: Vazir;">الگوهای رنگی و عددی در کلاس اول</p>
+				</section>
+				<section data-auto-animate data-auto-animate-id="moroor">
+					<h2 class="r-fit-text" dir="rtl" style="font-family: Vazir;">چیزی که از الگوها در گذشته یاد گرفتیم.</h2>
+					<p  style="font-family: Vazir;">الگوهای رنگی و عددی در کلاس اول</p>
+					<img class="r-stretch" data-src="/media/pictures/donbaleh_kelas_aval.png">
+				</section>
+				<section data-auto-animate data-auto-animate-id="moroor">
+					<h2 class="r-fit-text" dir="rtl" style="font-family: Vazir;">چیزی که از الگوها در گذشته یاد گرفتیم.</h2>
 					<p  class="fragment fade-up" style="font-family: Vazir;">مجموع اعداد یک دنباله</p>
 					<p class="fragment fade-up" style="font-family: Vazir;">مثل مجموع اعداد ۱ تا ۱۰۰</p>
+					<p class="fragment fade-up" dir = "rtl" style="font-family: Vazir;">برای مرور مجموع اعداد ۱ تا ۱۰۰ رو حساب کنین.</p>
 				</section>
 				<section data-auto-animate data-auto-animate-id="majmooa">
 					<h2 style="font-family: Vazir;" class="r-fit-text">مجموع جمله‌های</h2><h2 class="r-fit-text" style="font-family: Vazir;">یک دنباله</h2>
 				</section>
 				<section data-auto-animate data-auto-animate-id="majmooa">
-					<h2 style="font-family: Vazir;" class="r-fit-text">مجموع جمله‌های</h2><h2 class="r-fit-text" style="font-family: Vazir;">دنباله حسابی</h2>
+					<section>
+						<h2 style="font-family: Vazir;" class="r-fit-text">مجموع جمله‌های</h2><h2 class="r-fit-text" style="font-family: Vazir;">دنباله حسابی</h2>
+					</section>
+					<section>
+						<video class = "r-stretch" controls data-src="/media/videos/VisualـArithmeticـSums.mp4"></video>
+					</section>
 				</section>
 				<section data-auto-animate data-auto-animate-id="majmooa">
 					<h2 style="font-family: Vazir;" class="r-fit-text">مجموع جمله‌های</h2><h2 class="r-fit-text" style="font-family: Vazir;">دنباله هندسی</h2>
@@ -60,8 +104,8 @@
 						0 \lt r \lt 1
 						\end{aligned} \]
 					</section>
-					<section data-background-video="/media/videos/Visual proof of infinite geometric series sum.mp4">
-
+					<section>
+						<video class = "r-fit-text" controls data-src="/media/videos/Visual proof of infinite geometric series sum.mp4"></video>
 					</section>
 				</section>
 				<section style="font-family: Vazir;">
@@ -76,7 +120,7 @@
 				</section>
 			</div>
 		</div>
-		<script src="plugin/math/math.js"></script>
+		<script src="/plugin/math/math.js"></script>
 		<script>
 			Reveal.initialize({ center: false })
 			Reveal.initialize({ plugins: [ RevealMath.KaTeX ] });
