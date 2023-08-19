@@ -2,7 +2,8 @@
  .jaabe
 	{
 	height: 60vh;
-	overflow-x: hidden;	
+	overflow-x: scroll;
+	overflow-y: scroll;	
 	}
 
 ol  {
