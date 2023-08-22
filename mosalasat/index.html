@@ -1,26 +1,78 @@
 <!doctype html>
 <html>
 	<head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="/dist/reset.css">
+		<title>دنباله‌ها</title>
+
+		<link rel="stylesheet" href="/dist/reset.css">
 		<link rel="stylesheet" href="/dist/reveal.css">
 		<link rel="stylesheet" href="/dist/theme/black.css">
 		<link rel="stylesheet" href="/css/example.css">
-        <link rel="stylesheet" href="/plugin/highlight/monokai.css">
-    </head>
-    <body>
-        <div class="reveal">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="/plugin/highlight/monokai.css">
+		<style>
+			/* استایل‌های CSS برای تنظیم نمایش تصاویر */
+			.image-container {
+			  display: flex; /* استفاده از Flexbox برای قرار دادن تصاویر در یک ردیف */
+			}
+			.image-container img {
+			  width: 65%; /* تنظیم عرض تصاویر برای نمایش چهار تصویر در یک ردیف */
+			  padding: 3px; /* فاصله دهی بین تصاویر */
+			  box-sizing: border-box; /* حفظ اندازه کلی تصاویر با در نظر گرفتن padding */
+			}
+		  </style>
+	</head>
+	<body>
+		<div class="reveal">
 			<div class="slides">
-                <section>
-                    
-                    <p>در اینجا می‌خوایم در مورد مثلث‌ها صحبت کنیم. البته در بین مثلث‌ها بیشتر با مثلث قائم الزاویه راحت تر هستیم. مثلا در بخش <a href="/pythagoras/the_pythagorean_theorem_V/" target="_blank">فیثاغورث</a> دیدیم که چه قضیه‌های داشت و چه کارهایی می‌شد با اون انجام داد.</p>
-                </section>
+				
+                
+				<section>	
+                    <p dir ="rtl">در اینجا می‌خوایم در مورد مثلث‌ها صحبت کنیم. البته در بین مثلث‌ها بیشتر با مثلث قائم الزاویه راحت تر هستیم. مثلا در بخش <a href="/pythagoras/the_pythagorean_theorem_V/" target="_blank">فیثاغورث</a> دیدیم که چه قضیه‌های داشت و چه کارهایی می‌شد با اون انجام داد.</p>
+				</section>
+				<section>
+					<p dir ="rtl">+مثلثات چه کاربردهایی داره؟
+						<br>
+						- خوب کاربردهای زیادی داره ولی باید دید شما چقدر ازش رو قراره یاد بگیرین. بعد می‌شه چک کرد که از این مثلثاتی که یاد گرفتیم چه استفاده‌هایی می‌شه برد.
+					</p>
+				</section>
+				<section>
+					<div class = "image-container">
+						<img class="r-stretch" data-src="/media/pictures/Absolute_Reality_v16_A_box_to_which_a_rope_is_attached_and_a_w_0.jpg">
+						<img class="r-stretch" data-src="/media/pictures/Absolute_Reality_v16_A_sweaty_worker_pulling_a_box_along_with_0.jpg">
+						<img class="r-stretch" data-src="/media/pictures/PhotoReal_A_box_and_a_worker_who_pulls_the_box_on_the_ground_w_0.jpg">
+					</div>
+				</section>
+				<section>
+					<div class = "image-container">
+						<img class="r-stretch" data-src="/media/pictures/Default_The_effect_of_positive_and_negative_charges_of_electro_0_37ace33a-db52-493b-9965-451187eda9a3_1.jpg">
+						<img class="r-stretch" data-src="/media/pictures/RPG_40_The_effect_of_positive_and_negative_charges_of_electron_0.jpg">
+						<img class="r-stretch" data-src="/media/pictures/Default_The_effect_of_positive_and_negative_charges_of_electro_0_17895f5a-325b-47c7-acfb-334ea05bbb19_1.jpg">
+					</div>
+				</section>
+				
+				<section>
+					<img data-src="/media/pictures/Absolute_Reality_v16_vector_analysis_mathematics_airplane_geom_0.jpg">
+				</section>
+				<section>
+					<img data-src="/media/pictures/Isometric_Scifi_Buildings_vector_analysis_mathematics_airplane_0.jpg">
+				</section>
+				<section>
+					<img data-src="/media/pictures/DreamShaper_v7_Analysis_of_vectors_mathematics_plane_geometry_0.jpg">
+				</section>
+				
+				
 			</div>
 		</div>
-        
-        <script src="/dist/reveal.js"></script>
+		<script src="/plugin/math/math.js"></script>
+		<script>
+			Reveal.initialize({ center: false })
+			Reveal.initialize({ plugins: [ RevealMath.KaTeX ] });
+		</script>
+		<script src="/dist/reveal.js"></script>
 		<script src="/plugin/math/math.js"></script>
 		<script src="/plugin/manim/manim.js"></script>
 		<script src="/plugin/notes/notes.js"></script>
@@ -31,7 +83,7 @@
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
-				rtl: true,
+				rtl: false,
 				hash: true,
 				
 				
@@ -40,6 +92,5 @@
 			});
 			
 		</script>
-    </body>
-
+	</body>
 </html>

@@ -83,8 +83,7 @@ class PresentationWithCameraScene(PresentationScene, MovingCameraScene):
         self.end_fragment()
         #zela_a1 = Tex("a").move_to(line1.get_edge_center(LEFT))
         #self.wait(0.5)
-        self.end_fragment()
-        #self.wait(0.5)
+        
         kole_shekl = VGroup(group1 , group2, triangle3 , zela_c1 , zela_c2 ,angle3)
 
         matn1 = MathTex("\dfrac{1}{2}ab + \dfrac{1}{2}ab & + \dfrac{1}{2}cc").next_to(kole_shekl , UR).shift(DOWN*1.5)
@@ -113,7 +112,7 @@ class PresentationWithCameraScene(PresentationScene, MovingCameraScene):
         self.play(triangle3.animate.set_fill(RED , opacity = 1))
         #self.wait(0.4)
         self.end_fragment()
-        self.play(TransformFromCopy(triangle3.copy() , matn1[0][12:16]),)
+        self.play(TransformFromCopy(triangle3.copy() , matn1[0][12:17]),)
         #self.wait(0.4)
         self.end_fragment()
         matn2 = MathTex("ab & + \dfrac{1}{2}c^{2} = \dfrac{1}{2} \\times ( a + b )  \\times (a + b)").next_to(kole_shekl , UR).shift(DOWN*1.5)
@@ -128,6 +127,7 @@ class PresentationWithCameraScene(PresentationScene, MovingCameraScene):
 
         self.play(matn2[0][0:8].animate.shift(LEFT*1.5))
         matn2[0][8:].shift(LEFT*1.5)
+        self.end_fragment()
         self.play(Transform(VGroup(zela_b1 , zela_a2) , bracet_text))
         #self.wait(0.4)
         self.end_fragment()
