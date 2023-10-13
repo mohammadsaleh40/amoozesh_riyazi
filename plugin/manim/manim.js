@@ -208,3 +208,31 @@ function backward_trigger(event) {
     }
   }
 }
+var element = document.documentElement;
+var clickCount = 0;
+var clickTimeout;
+
+element.addEventListener("click", function() {
+  clearTimeout(clickTimeout);
+  clickCount++;
+
+  // تعیین مدت زمان تاخیر برای شمردن کلیک‌ها
+  var delay = 500; // 200 میلی‌ثانیه
+  console.log("touchEndX: " + clickCount);
+  clickTimeout = setTimeout(function() {
+    if (clickCount === 3) {
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen(); // Firefox
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen(); // Chrome, Safari, and Opera
+      } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen(); // Internet Explorer
+      }
+    }
+
+    // تنظیم مجدد تعداد کلیک‌ها برای استفاده مجدد
+    clickCount = 0;
+  }, delay);
+});
