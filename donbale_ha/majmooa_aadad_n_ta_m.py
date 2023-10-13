@@ -7,7 +7,7 @@ from manim_revealjs import PresentationScene, COMPLETE_LOOP
 manim.config.video_dir= "./videos"
 
 
-class majmooa(PresentationScene, MovingCameraScene):
+class majmooa1(PresentationScene, MovingCameraScene):
     def construct(self):
         
         l = ["{{1+2}}{{=}}{{?}}" , "{{1+2}} {{=}} {{$\Box$}}" , "{{1+2}} = {{$\Box$}} = 3", "{{1+2}} = {{$\Box$}}" , "{{1+2}} = {{A}}" ]
@@ -76,6 +76,68 @@ class majmooa(PresentationScene, MovingCameraScene):
         ReplacementTransform(t_62A[4][0] , t_6fra[0][5]))
         self.play(*[Write(x) for x in [t_6fra[0][1] , t_6fra[0][2] , t_6fra[0][6] , t_6fra[0][7]]],
         )
+        self.end_fragment()
         self.play(ReplacementTransform(t_6fra , t_3A))
         
+        self.end_fragment()
+        self.play(FadeOut(t_3A))
+        self.end_fragment()
+
+
+class majmooa2(PresentationScene, MovingCameraScene):
+    def construct(self):
+                
+
+        pas = Text("پس چی شد؟" , font = "danstevis")
+        self.play(Write(pas, reverse=True, remover=False))
+        
+        self.end_fragment()
+        self.play(FadeOut(pas))
+        self.end_fragment()
+class majmooa3(PresentationScene, MovingCameraScene):
+    def construct(self):
+        t_12 = Tex("{{1+2}} = {{A}}")
+        t_21_re = Tex("2+1 = A").next_to(t_12,DOWN)
+        li = Line()
+        li.width = t_21_re.width
+        li.next_to(t_21_re,DOWN)
+        plus = Tex("+")
+        plus.next_to(li , UL)
+        t_33 = Tex("{{3+3}} {{=}} {{A}}{{+}}{{A}}").next_to(li , DOWN)
+        t_33_temp = Tex("{{3+3}} {{=}} 2{{A}}").move_to(t_33)
+        t_62A = Tex("{{6}} {{=}} 2{{A}}").move_to(t_33_temp)
+        t_6fra = Tex("$\\frac{6}{2} = \\frac{2A}{2}$").move_to(t_62A)
+        t_3A = Tex("3 {{=}} {{A}}").move_to(t_6fra)
+
+        kole_12 = VGroup(t_12 , t_21_re , li  , plus , t_33 , t_33_temp , t_62A , t_6fra , t_3A)
+        self.camera.frame.move_to(kole_12).set(width=kole_12.width*2)
+        self.add(t_12)
+        self.end_fragment()
+        self.play(Write(t_21_re))
+        self.end_fragment()
+        self.play(Write(plus) , Create(li))
+        self.end_fragment()
+        self.play(ReplacementTransform(VGroup(*[t_12[1][0].copy() ,t_21_re[0][3].copy()]),t_33[2][0]))
+        self.play(ReplacementTransform(VGroup(*[t_12[0][0].copy() ,t_21_re[0][0].copy()]),t_33[0][0]))
+        self.play(ReplacementTransform(VGroup(*[t_12[0][2].copy() ,t_21_re[0][2].copy()]),t_33[0][2]))
+        self.play(ReplacementTransform(t_12[2][0].copy() ,t_33[4]) , ReplacementTransform(t_21_re[0][4].copy() ,t_33[6]) , Write(t_33[5]))
+        
+        self.play(ReplacementTransform(VGroup(*[t_12[0][1].copy() ,t_21_re[0][1].copy()]),t_33[0][1]))
+        self.end_fragment()
+        self.play(TransformMatchingTex(t_33 , t_33_temp))
+        self.end_fragment()
+        self.play(TransformMatchingTex(t_33_temp,t_62A))
+        self.end_fragment()
+        self.play(#FadeOut(t_62A),
+        ReplacementTransform(t_62A[0][0] , t_6fra[0][0]),
+        ReplacementTransform(t_62A[2][0] , t_6fra[0][3]),
+        ReplacementTransform(t_62A[3][0] , t_6fra[0][4]),
+        ReplacementTransform(t_62A[4][0] , t_6fra[0][5]))
+        self.play(*[Write(x) for x in [t_6fra[0][1] , t_6fra[0][2] , t_6fra[0][6] , t_6fra[0][7]]],
+        )
+        self.end_fragment()
+        self.play(ReplacementTransform(t_6fra , t_3A))
+        
+        self.end_fragment()
+        self.play(FadeOut(t_3A , plus , li , t_12 , t_21_re))
         self.end_fragment()

@@ -27,6 +27,7 @@ window.RevealManim = {
 }
 
 
+Reveal.configure({ autoPlayMedia: false});
 // *****
 // ** Functions for the initial setup
 // *****
