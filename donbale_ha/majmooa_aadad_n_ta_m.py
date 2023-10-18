@@ -141,3 +141,28 @@ class majmooa3(PresentationScene, MovingCameraScene):
         self.end_fragment()
         self.play(FadeOut(t_3A , plus , li , t_12 , t_21_re))
         self.end_fragment()
+
+class majmooa4(PresentationScene, MovingCameraScene):
+    def construct(self):
+        l = ["{{1+2+3+4+5+6+7+8+9+10}}{{=}}{{?}}" , "{{1+2+3+4+5+6+7+8+9+10}} {{=}} {{$\Box$}}" , "{{1+2+3+4+5+6+7+8+9+10}} = {{$\Box$}} = 55", "{{1+2+3+4+5+6+7+8+9+10}} = {{$\Box$}}" , "{{1+2+3+4+5+6+7+8+9+10}} = A" ]
+        l_t12 = VGroup(*[Tex(l[i]) for i in range(len(l))]) 
+        
+        self.play(Write(l_t12[0]),
+        self.camera.frame.animate.move_to(l_t12[0]).set(width=l_t12[0].width*2) , run_time = 0.5)
+        self.end_fragment()
+        for i in range(1,len(l)):
+            self.play(TransformMatchingTex(l_t12[i-1] , l_t12[i]  ),
+            self.camera.frame.animate.move_to(l_t12[i]).set(width=l_t12[i].width*2))
+            self.end_fragment()
+        
+        t_21_re = Tex("10+9+8+7+6+5+4+3+2+1 = A").next_to(l_t12[-1],DOWN)
+        for i in range(0 ,18):
+            self.play(ReplacementTransform(l_t12[-1][0][i].copy() ,t_21_re[0][19-i]))
+        #self.play(ReplacementTransform(l_t12[-1][0][0].copy() ,t_21_re[0][2]))
+        #self.play(ReplacementTransform(l_t12[-1][0][1].copy() ,t_21_re[0][1]))
+        #self.play(ReplacementTransform(l_t12[-1][0][2].copy() ,t_21_re[0][0]))
+        self.play(ReplacementTransform(l_t12[-1][0][18:20].copy() ,VGroup(*[t_21_re[0][0] , t_21_re[0][1]])))
+        self.play(ReplacementTransform(l_t12[-1][1:].copy() , t_21_re[0][-2:] ))
+        
+        self.end_fragment()
+        
