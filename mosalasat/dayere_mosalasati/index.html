@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="/dist/reset.css">
 		<link rel="stylesheet" href="/dist/reveal.css">
 		<link rel="stylesheet" href="/dist/theme/black.css">
+		<link rel="stylesheet" href="/dist/theme/black.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="/plugin/highlight/monokai.css">
@@ -19,11 +20,23 @@
 				<section class="fv-background" fv-video="videos/dayere_mosalasati.mp4" fv-playback-info="videos/dayere_mosalasati.json">
 					
 				</section>
-                <section>
-					<video class="r-fit-text" controls data-src="/media/videos/y2mate.com - Trig Visualized One Diagram to Rule them All six trig functions in one diagram_1440p.mp4"></video>	
+				<section>
+					<section>
+						
+						<div class="canvas-wrapper">
+							<canvas class="canvas" id="canvas" >
+						</div>
+						
+					</section>
+					<section>
+						<video class="r-fit-text" controls data-src="/media/videos/y2mate.com - Trig Visualized One Diagram to Rule them All six trig functions in one diagram_1440p.mp4"></video>	
+					</section>
+					
+					<section>
+						<a href="/mosalasat/dayere_mosalasati/ci.html" target="_blank" >لینک صفحه کامل دایره مثلثاتی</a>
+					</section>
 				</section>
-				
-			</div>
+				</div>
 		</div>
 
 		<script src="/dist/reveal.js"></script>
@@ -42,5 +55,8 @@
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealManim ]
 			});
 		</script>
+		<script src="trigonoparty.js?v=anticache.17"></script>
+		<script src="ui.js?v=anticache.16"></script>
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
 	</body>
 </html>
