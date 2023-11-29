@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>پژوهش سرا</title>
+
+		<link rel="stylesheet" href="/dist/reset.css">
+		<link rel="stylesheet" href="/dist/reveal.css">
+		<link rel="stylesheet" href="/dist/theme/black.css">
+        <link rel="stylesheet" href="/css/example.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="/plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <section data-auto-animate>
+                        <h1  class="fragment fade-up" style="font-family: Vazir;">اتحاد</h1>
+                        <ul style="font-size:32px">
+                            <p  class="fragment fade-up" >اتحاد مربع کامل:</p>
+                            <p class="fragment fade-up">\[\begin{aligned}
+                            (a+b)^2 = a^2 + 2ab + b^2
+                            \end{aligned} \]</p>
+                            <p class="fragment fade-up">طرف راست</p>
+                            <p class="fragment fade-up">
+                            \[\begin{aligned}
+                            = (a+b)^2
+                            \end{aligned} \]
+                            </p>
+                            <p class="fragment fade-up">
+                                \[\begin{aligned}
+                                = (a+b) \times (a+b)
+                                \end{aligned} \]
+                            </p>
+                            <p class="fragment fade-up">
+                                \[\begin{aligned}
+                                = a^2 + ab + ba + b^2
+                                \end{aligned} \]
+                            </p>
+                            </ul>
+                    </section>
+                    <section data-auto-animate>
+                        <h1  style="font-family: Vazir;">اتحاد</h1>
+                        <ul style="font-size:22px">
+                            <p  >اتحاد مربع کامل:</p>
+                            <p >\[\begin{aligned}
+                            (a+b)^2 = a^2 + 2ab + b^2
+                            \end{aligned} \]</p>
+                            <p >طرف راست</p>
+                            <p >
+                            \[\begin{aligned}
+                            = (a+b)^2
+                            \end{aligned} \]
+                            </p>
+                            <p >
+                                \[\begin{aligned}
+                                = (a+b) \times (a+b)
+                                \end{aligned} \]
+                            </p>
+                            <p >
+                                \[\begin{aligned}
+                                = a^2 + ab + ab + b^2
+                                \end{aligned} \]
+                            </p>
+                            <p class="fragment fade-up">
+                                \[\begin{aligned}
+                                = a^2 + 2ab + b^2
+                                \end{aligned} \]
+                            </p>
+                            <p class="fragment fade-up">طرف چپ</p>
+
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section data-auto-animate>
+                    <p>
+                        \[\begin{aligned}
+                        \sin^2{\theta} + \cos^2{\theta} = 1
+                        \end{aligned} \]
+                    </p>
+                    <p class="fragment fade-up">
+                        \[\begin{aligned}
+                        \sin^2{\theta} = 1 - \cos^2{\theta}
+                        \end{aligned} \]
+                    </p>
+                    <p class="fragment fade-up">
+                        \[\begin{aligned}
+                        \cos^2{\theta} = 1 - \sin^2{\theta}
+                        \end{aligned} \]
+                    </p>
+                </section>
+                <section data-auto-animate>
+                    <p>
+                        \[\begin{aligned}
+                        \sin^2{\theta} + \cos^2{\theta} = 1
+                        \end{aligned} \]
+                    </p>
+                    <p >
+                        \[\begin{aligned}
+                        \sin{\theta} =\sqrt{ 1 - \cos^2{\theta}}
+                        \end{aligned} \]
+                    </p>
+                    <p >
+                        \[\begin{aligned}
+                        \cos^2{\theta} = 1 - \sin^2{\theta}
+                        \end{aligned} \]
+                    </p>
+                </section>
+                <section data-auto-animate>
+                    <p>
+                        \[\begin{aligned}
+                        \sin^2{\theta} + \cos^2{\theta} = 1
+                        \end{aligned} \]
+                    </p>
+                    <p >
+                        \[\begin{aligned}
+                        \sin{\theta} =\sqrt{ 1 - \cos^2{\theta}}
+                        \end{aligned} \]
+                    </p>
+                    <p >
+                        \[\begin{aligned}
+                        \cos{\theta} = \sqrt{ 1 - \sin^2{\theta}}
+                        \end{aligned} \]
+                    </p>
+                </section>
+                </section>
+                <section>
+                    <section data-auto-animate>
+                        <p>
+                            \[\begin{aligned}
+                            \tan^2{\theta} + 1 = \dfrac{1}{\cos^2{\theta}}
+                            \end{aligned} \]
+                        </p>
+                        <p class="fragment fade-up">
+                            \[\begin{aligned}
+                            \tan{\theta} = \sqrt{\dfrac{1}{\cos^2{\theta}} - 1}
+                            \end{aligned} \]
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <p>
+                            \[\begin{aligned}
+                            \cot^2{\theta} + 1 = \dfrac{1}{\sin^2{\theta}}
+                            \end{aligned} \]
+                        </p>
+                        <p >
+                            \[\begin{aligned}
+                            \cot{\theta} = \sqrt{\dfrac{1}{\sin^2{\theta}} - 1}
+                            \end{aligned} \]
+                        </p>
+                    </section>
+                </section>
+			</div>
+		</div>
+
+		<script src="/plugin/math/math.js"></script>
+		<script>
+			Reveal.initialize({ center: false })
+			Reveal.initialize({ plugins: [ RevealMath.KaTeX ] });
+		</script>
+		<script src="/dist/reveal.js"></script>
+		<script src="/plugin/math/math.js"></script>
+		<script src="/plugin/manim/manim.js"></script>
+		<script src="/plugin/notes/notes.js"></script>
+		<script src="/plugin/markdown/markdown.js"></script>
+		<script src="/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				rtl: false,
+				hash: true,
+				
+				
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3, RevealManim ]
+			});
+			
+		</script>
+	</body>
+</html>
